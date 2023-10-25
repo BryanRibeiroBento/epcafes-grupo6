@@ -48,7 +48,7 @@ public class InsumoController {
     public String create(Maquina insumo) throws NegocioExeption {
 
         maquinaService.salvar(insumo);
-        return "redirect:/";
+        return "redirect:/pesquisaInsumos";
 
     }
 
