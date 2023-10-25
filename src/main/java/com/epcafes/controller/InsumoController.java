@@ -41,7 +41,7 @@ public class InsumoController {
         model.addAttribute("opcoesImplementos", opcoesImplementos);
         model.addAttribute("opcoesCombustivel", opcoesCombustivel);
 
-        return "/cadastroInsumos";
+        return "restricted/cadastro/cadastroInsumos";
     }
 
     @PostMapping("/cadastroInsumos")
@@ -53,11 +53,10 @@ public class InsumoController {
     }
 
     @GetMapping("/pesquisaInsumos")
-    public ModelAndView pesquisa() {
-        ModelAndView mv = new ModelAndView("pesquisaInsumos");
-        mv.addObject("maquinas", maquinaService.buscarMaquinas());
+    public String pesquisa(Model model) {
+        model.addAttribute("maquinas", maquinaService.buscarMaquinas());
 
-        return mv;
+        return "restricted/cadastro/PesquisaInsumos";
 
     }
 
@@ -79,7 +78,7 @@ public class InsumoController {
                 .findFirst().get();
 
         model.addAttribute("maquina", maquinaFind);
-        return "/editarInsumo";
+        return "restricted/cadastro/editarInsumo";
 
     }
 
