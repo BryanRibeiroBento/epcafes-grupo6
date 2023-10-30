@@ -232,6 +232,25 @@ public enum TipoAuxiliarInsumos {
     /* --------------------------------- */
     /* tipos de herbicidas */
     /* --------------------------------- */
-    ADJUVANTES
+
+    /* --------------------------------- */
+    /* tipos de insumos */
+    /* --------------------------------- */
+
+    FERTILIZANTE,
+    FUNGICIDA,
+    HERBICIDA,
+    INSETICIDA,
+    ADJUVANTES,
+
+    /* --------------------------------- */
+    /* tipos de MEDIDAS */
+    /* --------------------------------- */
+    SACO,
+    LITRO,
+    METRO_CUBICO,
+    QUILO,
+    TONELADA,
+    UNIDADE,
 
 }

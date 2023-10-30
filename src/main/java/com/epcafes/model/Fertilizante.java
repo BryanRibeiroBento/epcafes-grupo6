@@ -5,9 +5,7 @@ import java.time.OffsetDateTime;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import com.epcafes.model.enums.Medida;
 import com.epcafes.model.enums.TipoAuxiliarInsumos;
-import com.epcafes.model.enums.TipoInsumo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,10 +27,10 @@ public class Fertilizante {
     private Long tenantId;
 
     @Enumerated(EnumType.STRING)
-    private Medida medida;
+    private TipoAuxiliarInsumos medida;
 
     @Enumerated(EnumType.STRING)
-    private TipoInsumo tipoInsumo;
+    private TipoAuxiliarInsumos tipoInsumo;
 
     @Enumerated(EnumType.STRING)
     private TipoAuxiliarInsumos tipo;
